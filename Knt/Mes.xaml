@@ -1,0 +1,27 @@
+﻿<Window x:Class="Knt.Mes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Knt"
+        mc:Ignorable="d"
+        Title="Mes" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="mess" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <ListBox x:Name="users" Grid.Row="1" Grid.Column="0"/>
+        <Button x:Name="exit" Grid.Column="0" Grid.Row="2" Content="Выход" Click="exit_Click"/>
+        <Button x:Name="input" Grid.Column="1" Grid.Row="2" Content="Отправить" Click="input_Click"/>
+        <TextBox x:Name="message" Grid.Row="2" Grid.Column="2"/>
+        <TextBlock x:Name="username" Grid.Column="0" Grid.Row="0"/>
+    </Grid>
+</Window>
